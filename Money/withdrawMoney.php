@@ -1,0 +1,82 @@
+<?php
+if (session_status() == PHP_SESSION_NONE) {
+    session_start();
+    if(!isset($_SESSION['status']))
+	{
+		header("location:signin.php");
+	}
+}
+ echo "Current User ID : ".$_SESSION['uid']."<br>";
+ 
+// echo "Your Current Balance is: ".$get_currentBal."<br>";
+ 
+?>
+<!DOCTYPE HTML>
+<html>
+
+<head>
+  <title>shadowplay_2</title>
+  <meta name="description" content="website description" />
+  <meta name="keywords" content="website keywords, website keywords" />
+  <meta http-equiv="content-type" content="text/html; charset=windows-1252" />
+   <link rel="stylesheet" type="text/css" href="../style/ownstyles.css" />
+  <link rel="stylesheet" type="text/css" href="../style/style.css" />
+</head>
+
+<body>
+  <div id="main">
+    <div id="header">
+      <div id="logo">
+        <div id="logo_text">
+         <?php include '../includes/logo.inc.php';
+         ?>
+        </div>
+      </div>
+      <div id="menubar">
+        <ul id="menu">
+            <?php include '../includes/menu.inc.php';
+         ?>
+        </ul>
+      </div>
+    </div>
+    <div id="content_header"></div>
+    <div id="site_content">
+      <div class="sidebar">
+       <?php include '../includes/sidebar.inc.php';
+         ?>
+      </div>
+      <div id="content">
+        <form method="post" action="index.php">
+        Payee Account Number:
+        <input type="text" name="accountNumber">
+            <br><br>Enter Transfer Amount:
+            <input type="text" name="withdrawAmt">$
+             <span class="error" >* <?php
+                if (isset($lessAmtErr)) {
+                    echo $lessAmtErr;
+                }
+                ?>   </span>
+            <span class="error" >* <?php
+                if (isset($negativeAmtErr)) {
+                    echo $negativeAmtErr;
+                }
+                ?>   </span>
+            <br>
+            <br><br>
+            <?php
+       $date = date('m/d/Y');?>
+        
+     <input type="hidden" name="withdrawdate" value="<?php echo $date; ?>">
+              <input type="hidden" name="transaction" value="withdraw">
+            <input type="submit" name="action" value="Withdraw">
+        </form>
+    </div>
+    </div>
+    <div id="content_footer"></div>
+    <div id="footer">
+     <?php include '../includes/footer.inc.php';
+         ?>
+    </div>
+  </div>
+</body>
+</html>

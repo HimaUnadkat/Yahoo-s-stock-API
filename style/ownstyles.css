@@ -1,0 +1,121 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : Dec 14, 2014, 4:31:23 PM
+    Author     : hima
+*/
+
+.loss {
+    margin-top: 5px;
+    padding: 5px;
+    background-color: #F00;
+    border: 2px solid #666;
+    width: auto;
+    color: #000000;
+}
+.profit {
+    margin-top: 5px;
+    padding: 5px;
+    background-color: #0F0;
+    border: 2px solid #666;
+    width: auto;
+    color: #000000;
+}
+.wrong {
+    margin-top: 5px;
+    padding: 5px;
+    background-color: #F00;
+    border: 2px solid #666;
+    width: auto;
+    color: #000000;
+}
+.green{
+    color: #0F0;
+}
+.red{
+    color: red;
+}
+.error {
+color: red;
+font-weight: normal !important;
+}
+body{
+font-family:'Raleway',sans-serif;
+
+ 
+}
+form { padding: 20px; width: 400px; display: block;
+      // background: #FAFAFA;   
+    //   border-style: solid;
+    //border-width: medium; 
+    margin: 0 auto;}
+
+label {
+	padding-left: 10px;
+	color: #808080;
+	display: inline-block;
+	width: 155px;
+        
+}
+
+select{
+width:100px;
+padding:5px;
+border-radius:10px;
+border:4px solid #cbcbcb;
+box-shadow:inset 0 1px 2px rgba(0,0,0,0.18);
+}
+
+input[type="text"] {
+border:1px solid #DADADA;
+margin-top:10px ;
+margin-bottom:10px;
+//padding-left:35px;
+width:310px;
+height:25px;
+font-size:14px;
+box-shadow:0 0 10px;
+
+    }
+    input[type="password"] {
+border:1px solid #DADADA;
+margin-top:10px ;
+margin-bottom:10px;
+//padding-left:35px;
+width:310px;
+height:25px;
+font-size:14px;
+box-shadow:0 0 10px;
+
+    }
+    textarea#message{
+      border:1px solid #DADADA;
+margin-top:10px ;
+margin-bottom:10px;
+//padding-left:35px;
+width:310px;
+height:200px;
+font-size:14px;
+box-shadow:0 0 10px;  
+    }
+ 
+    input#finalize,#reset,#CalculatePrice,#AddToCart,#GoToCart,#fetch,#SignIn,#signup,#Update,#Continue,#startSellingNow,#retrieve,#sellingCart,#gotoScart{
+    background-color:#FF9980;
+border-radius:5px;
+border:none;
+padding:10px 25px;
+color:#FFF;
+text-shadow:1px 1px 1px #949494;
+
+
+}
+
+.hide:checked~.hidethis{
+    display: none;
+}
+.show:checked~.hidethis{
+    display: block;
+}
