@@ -1,1 +1,4 @@
 # Yahoo-s-stock-API
+In this project, a user can create a profile and can get a real time stock price to buy/sell stocks.  The user’s history of buying and selling will be maintained including the stock price and quantity. User can add credits to his account using credit cards. User can check all the transactions by date/month/year. When user sells stocks, the amount will be added to his account & he can check how much exact profit/loss he will get. Moreover a user can deposit or transfer his money anytime, anywhere.  Necessary Validations of credit cards are done through JavaScript.
+
+Environment : PHP MVC, MySQL, Yahoo’s Stock Api, Netbeans, JavaScript, HTML5, Css3, MySQL, XAMPP
